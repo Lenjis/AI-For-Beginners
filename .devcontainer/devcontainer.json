@@ -29,6 +29,6 @@
     }
   },
   "forwardPorts": [],
-  "postCreateCommand": "conda update conda -y && conda env create -f environment.yml",
+  "postCreateCommand": "cat condarc.txt > ~/.condarc && conda update conda -y && conda env create -f environment.yml",
   "remoteUser": "vscode"
 }

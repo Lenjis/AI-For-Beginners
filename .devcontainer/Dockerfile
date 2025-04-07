@@ -17,12 +17,12 @@ COPY .devcontainer/environment.yml* .devcontainer/requirements.txt /tmp/conda-tm
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then \
     umask 0002 \
     # 更改源
-	&& echo "channels:" > ~/.condarc \
-	&& echo " - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/" >> ~/.condarc \
-	&& echo " - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/" >> ~/.condarc \
-	&& echo " - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/" >> ~/.condarc \
-	&& echo "ssl_verify: true" >> ~/.condarc \
-	&& cat ~/.condarc \
+	# && echo "channels:" > ~/.condarc 
+	# && echo " - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/" >> ~/.condarc \
+	# && echo " - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/" >> ~/.condarc \
+	# && echo " - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/" >> ~/.condarc \
+	# && echo "ssl_verify: true" >> ~/.condarc \
+	# && cat ~/.condarc \
     && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; \
     fi \
     && rm -rf /tmp/conda-tmp
