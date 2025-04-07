@@ -26,7 +26,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then \
     && cat /tmp/conda-tmp/condarc.txt > ~/.condarc \
     && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; \
     fi \
-    && rm -rf /tmp/conda-tmp
+    # && rm -rf /tmp/conda-tmp
 
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
