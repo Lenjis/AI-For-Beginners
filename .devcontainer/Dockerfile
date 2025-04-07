@@ -23,7 +23,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then \
 	# && echo " - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/" >> ~/.condarc \
 	# && echo "ssl_verify: true" >> ~/.condarc \
 	# && cat ~/.condarc \
-    && cat condarc.txt > ~/.condarc \
+    && cat /tmp/conda-tmp/condarc.txt > ~/.condarc \
     && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; \
     fi \
     && rm -rf /tmp/conda-tmp
